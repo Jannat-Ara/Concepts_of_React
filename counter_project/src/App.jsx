@@ -7,13 +7,18 @@ function App() {
   //without using states, it will only update the js not the UI. With the help of hooks we can make changes in the UI.
   const addValue = () => {
     console.log("Before clicked:", counter);
-    setCounter(counter + 1);
+    if (counter < 20) {
+      setCounter(counter + 1);
+    }
 
   }
   console.log("After click on Add Value:", counter);
   const removeValue = () => {
     console.log("Before clicked:", counter);
-    setCounter(counter -1);
+    if (counter > 0) {
+      setCounter(counter - 1);
+    }
+
 
   }
   return (
